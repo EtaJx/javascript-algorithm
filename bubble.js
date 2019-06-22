@@ -3,20 +3,20 @@
  */
 const arr = [2, 4, 1, 3];
 function bubbleSort(arr) {
-  const max = arr.length - 1;
-  for (var a = 0; a < max; a++) {
-    let done = true;
-    for (var i = 0; i < max - a; i++) {
-      if (arr[i] > arr[i + 1]) {
-        [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]]
-        done = false;
-      }
+    const max = arr.length - 1;
+    for (var a = 0; a < max; a++) {
+        let done = true;
+        for (var i = 0; i < max - a; i++) {
+            if (arr[i] > arr[i + 1]) {
+                [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]]
+                done = false;
+            }
+        }
+        if (done) {
+            break;
+        }
     }
-    if (done) {
-      break;
-    }
-  }
-  return arr;
+    return arr;
 }
 
 // 测试

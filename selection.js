@@ -3,18 +3,18 @@
  */
 const arr = [2, 4, 1, 3];
 function selectionSort(arr) {
-  for(let i = 0; i < arr.length - 1; i++) {
-    let minIndex = i;
-    for(let j = i + 1; j < arr.length; j ++) {
-      if(arr[j] < arr[minIndex]) {
-        minIndex = j;
-      }
+    for (let i = 0; i < arr.length - 1; i++) {
+        let minIndex = i;
+        for (let j = i + 1; j < arr.length; j++) { // 除去本身之外的元素
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
+            }
+        }
+        if (minIndex != i) {
+            [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+        }
     }
-    if(minIndex != i) {
-      [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
-    }
-  }
-  return arr;
+    return arr;
 }
 
 /**
